@@ -16,8 +16,8 @@ import NavBar from './Components/NavigationBar/NavBar';
 function App() {
   return (
     <Router>
+      <NavBar/>
       <div className="App">
-        <NavBar/>
         {/* <DraggableBox userInfo={userInfo} userFinancialInfo={userFinancialInfo} userMortgageInfo={userMortgageInfo} userVehicleInfo={userVehicleInfo}/> */}
         {/* <NavBar /> */}
           <Routes>
@@ -46,20 +46,20 @@ function App() {
               }>
             </Route>
             {/* About */}
-            <Route path="/About" exact 
+            <Route path="/AboutMe" exact 
               element={
                 <AboutMe />
               }>
             </Route>
             {/* ContactMe */}
-            <Route path="/Contact" exact 
+            <Route path="/ContactMe" exact 
               element={
                 <ContactMe />
               }>
             </Route>
           </Routes>
-        {/* <Footer /> */}
       </div>
+      {/* <Footer /> */}
     </Router>
   );
 }

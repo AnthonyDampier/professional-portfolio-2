@@ -10,9 +10,13 @@ import Network from './Pages/Network/Network';
 import AboutMe from './Pages/AboutMe/AboutMe';  
 import ContactMe from './Pages/ContactMe/ContactMe';
 
+// Components
+import NavBar from './Components/NavigationBar/NavBar';
+
 function App() {
   return (
     <Router>
+      <NavBar/>
       <div className="App">
         {/* <DraggableBox userInfo={userInfo} userFinancialInfo={userFinancialInfo} userMortgageInfo={userMortgageInfo} userVehicleInfo={userVehicleInfo}/> */}
         {/* <NavBar /> */}
@@ -42,20 +46,20 @@ function App() {
               }>
             </Route>
             {/* About */}
-            <Route path="/About" exact 
+            <Route path="/AboutMe" exact 
               element={
                 <AboutMe />
               }>
             </Route>
             {/* ContactMe */}
-            <Route path="/Contact" exact 
+            <Route path="/ContactMe" exact 
               element={
                 <ContactMe />
               }>
             </Route>
           </Routes>
-        {/* <Footer /> */}
       </div>
+      {/* <Footer /> */}
     </Router>
   );
 }

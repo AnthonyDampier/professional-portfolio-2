@@ -1,0 +1,125 @@
+.navbar {
+    background: transparent;
+    /* Match the navbar background color */
+    height: 80px;
+    /* Adjust to match the height in your image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Adjust based on your design */
+    padding: 0 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Your logo styling goes here */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    /* Additional styling for your navigation items */
+}
+
+.nav-item {
+    padding: 0 10px;
+    /* Additional styling for your navigation items */
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #fff;
+    /* Adjust the color to match your design */
+    /* Other link styling */
+}
+
+.hamburger-menu {
+    display: none;
+    /* Additional styling for your hamburger menu */
+}
+/* Media queries to handle responsiveness */
+@media screen and (max-width: 960px) {
+    /* Adjust menu for smaller screens */
+}
+
+/* ... other styles ... */
+
+.menu-icon {
+    display: none;
+}
+
+/* ... other styles ... */
+
+@media screen and (max-width: 960px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        text-align: right;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: absolute;
+        top: 64px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+        background: #141e29;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: end;
+        align-content: end;
+        width: fit-content;
+        justify-content: end;
+        /* Other styles as needed */
+    }
+
+    .nav-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        /* Other styles as needed */
+    }
+
+    .nav-links:hover {
+        background-color: #1888ff;
+        border-radius: 0;
+    }
+
+    svg {
+        font-size: 1.8rem;
+        cursor: pointer;
+        text-align: right;
+        color: #fff;
+        stroke: #fff;    
+    }
+    
+    .logo {
+        display: none;
+    }   
+}

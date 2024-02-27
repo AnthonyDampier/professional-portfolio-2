@@ -1,0 +1,51 @@
+.navbar {
+    background-color: #000;
+    /* Match the navbar background color */
+    height: 80px;
+    /* Adjust to match the height in your image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Adjust based on your design */
+    padding: 0 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Your logo styling goes here */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    /* Additional styling for your navigation items */
+}
+
+.nav-item {
+    padding: 0 10px;
+    /* Additional styling for your navigation items */
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #fff;
+    /* Adjust the color to match your design */
+    /* Other link styling */
+}
+
+.nav-icons {
+    /* Styling for your right side icons */
+}
+
+/* Media queries to handle responsiveness */
+@media screen and (max-width: 960px) {
+    /* Adjust menu for smaller screens */
+}

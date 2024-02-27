@@ -10,10 +10,14 @@ import Network from './Pages/Network/Network';
 import AboutMe from './Pages/AboutMe/AboutMe';  
 import ContactMe from './Pages/ContactMe/ContactMe';
 
+// Components
+import NavBar from './Components/NavigationBar/NavBar';
+
 function App() {
   return (
     <Router>
       <div className="App">
+        <NavBar/>
         {/* <DraggableBox userInfo={userInfo} userFinancialInfo={userFinancialInfo} userMortgageInfo={userMortgageInfo} userVehicleInfo={userVehicleInfo}/> */}
         {/* <NavBar /> */}
           <Routes>

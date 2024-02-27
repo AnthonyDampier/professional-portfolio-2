@@ -7,9 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
   overflow-x: hidden;
-
-  background: rgb(22,67,117);
-background: radial-gradient(circle, rgb(6, 23, 43) 5%, rgba(12,32,55,1) 86%);
+  
+  background-color: #1a212b;
 }
 
 code {

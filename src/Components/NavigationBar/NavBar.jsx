@@ -21,7 +21,9 @@ const NavBar = () => {
             </div>
             <div className="logo">
             {/* You can put an <img> tag here for your logo or use text */}
-            <img src="path-to-your-logo.png" alt="Logo" />
+            <a href="https://github.com/AnthonyDampier" target="_blank" rel="noreferrer">
+                <img className="GitHub logo-img" src="https://editor.analyticsvidhya.com/uploads/765900ba9-article-200807-github-gitguardbody-text.jpg" alt="GitHub-Logo" />
+            </a>
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 {/* List your nav items here */}

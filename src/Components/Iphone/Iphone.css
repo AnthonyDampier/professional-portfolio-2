@@ -1,0 +1,168 @@
+.iphone {
+    top: 100px;
+    width: 250px;
+    height: 500px;
+    border-radius: 23px;
+    background: #666;
+    position: relative;
+    margin: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.iphone-top {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    height: 20px;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.iphone-top .black-rim {
+    top: 15px;
+    width: fit-content;
+    height: 20px;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    padding: 0px 20px;
+}
+
+.camera {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin: 2px;
+}
+
+.speaker {
+    width: 30px;
+    height: 5px;
+    background: black;
+    border-radius: 10px;
+    z-index: 1;
+    margin: 2px;
+}
+
+.iphone-screen {
+    width: 246px;
+    height: 496px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 20px;
+    background-color: #1a212b;
+}
+
+.iphone-screen img {
+    position: absolute;
+    border-radius: 70%;
+    width: 70%;
+    left: 15%;
+    top: 15%;
+    box-shadow: 0 4px 8px 0 rgba(146, 146, 146, 0.2);
+}
+
+.iphone-screen p {
+    position: absolute;
+    color: white;
+    top: 48%;
+    width: 70%;
+    left: 15%;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+p.carrier {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+div.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info span {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 2px;
+}
+
+.iphone .name {
+    position: inherit;
+    top: 240px;
+    color: white;
+    font: optional;
+    text-shadow: 0px 0px 2px #7d7d7d;
+    
+}
+
+.iphone .link-tree {
+    position: absolute;
+    top: 285px;
+    font-size: 12px;
+    width: 75%;
+    left: 12.5%;
+    right: 12.5%;
+    background-color: transparent;
+}
+
+.iphone .link-tree a {
+    font-family: 'San Francisco', Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 4px 0px;
+    margin: 10px 0px;
+    margin-top: 12px;
+    background-color: silver;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(146, 146, 146, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.iphone .links {
+    position: inherit;
+    top: 440px;
+    justify-content: center;
+    width: 246px;
+}
+
+.iphone .links div {
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.iphone .links div a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.iphone .links div a:hover {
+    color: #5d5d5d;
+}
+
+.iphone .links hr {
+    border: .2px solid #5a564f;
+    width: 65%;
+}

@@ -1,5 +1,5 @@
 .iphone {
-    top: 100px;
+    position: absolute;
     width: 250px;
     height: 500px;
     border-radius: 23px;

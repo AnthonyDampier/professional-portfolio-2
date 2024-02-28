@@ -1,9 +1,9 @@
 .iphone {
-    top: 100px;
+    position: absolute;
     width: 250px;
     height: 500px;
     border-radius: 23px;
-    background: #666;
+    background: #525252;
     position: relative;
     margin: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -137,6 +137,12 @@ div.info{
     transition: all 0.2s ease-in-out;
 }
 
+.iphone .link-tree a:hover {
+    background-color: #5d5d5d;
+    color: white;
+    border-radius: 5px;
+}
+
 .iphone .links {
     position: inherit;
     top: 440px;
@@ -156,6 +162,7 @@ div.info{
     text-decoration: none;
     margin: 0 10px;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .iphone .links div a:hover {

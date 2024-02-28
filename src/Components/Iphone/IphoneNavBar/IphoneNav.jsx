@@ -14,7 +14,7 @@ const IphoneNav = () => {
                 <div className="navbar-container">
                     <div className="menu-icon" onClick={handleClick}>
                         {/* You can put an <i> tag here for your menu icon */}
-                        <i className={click ? "fas fa-times" : "fas fa-bars"} />
+                        {/* <i className={click ? "fas fa-times" : "fas fa-bars"} /> */}
                         <RxHamburgerMenu />
                     </div>
                     <div className="logo">

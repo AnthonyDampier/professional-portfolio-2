@@ -1,9 +1,12 @@
-import Reac, {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import './GitActivity.css';
+import getUserContributions from '../../Utils/GetUserGitHubContributions/GetUserGitContributions.jsx';
 
 const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const token = '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';
+    console.log(getUserContributions(username, token));
   
     useEffect(() => {
       const fetchEvents = async () => {

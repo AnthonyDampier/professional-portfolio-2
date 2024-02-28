@@ -16,7 +16,7 @@ const home = () => {
                 linkedIn={linkedIn} 
                 GitHubProfile = {GitHubProfile}
             />
-            <GitActivity username="anthonydampier"/>
+            <GitActivity username="AnthonyDampier"/>
             {/* GitHub Activity Block */}
             {/* Project of 6 project complete and to complete 
                 1. Project LINK

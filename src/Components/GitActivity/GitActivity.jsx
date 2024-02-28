@@ -5,9 +5,17 @@ import getUserContributions from '../../Utils/GetUserGitHubContributions/GetUser
 const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const token = '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';
-    console.log(getUserContributions(username, token));
-  
+    const token = process.env.REACT_APP_GITHUB_TOKEN;
+    const fetchEventsContributions = async () => { 
+      setLoading(true);
+      try {
+        const response = await getUserContributions(username, token);
+        console.log(response);
+      } catch (error) {
+        setError(error.message);
+      }
+
+    }
     useEffect(() => {
       const fetchEvents = async () => {
         setLoading(true);
@@ -24,7 +32,7 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
           setLoading(false);
         }
       };
-  
+      fetchEventsContributions();
       fetchEvents();
     }, [username]);
   

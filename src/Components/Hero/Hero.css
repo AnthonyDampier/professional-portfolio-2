@@ -1,0 +1,45 @@
+h1.name {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+h2.title {
+    font-size: 1.0rem;
+    margin-top: 0;
+}
+
+p {
+    color: rgb(175, 175, 175);
+    font-weight: 700;
+}
+
+button.about-me {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'San Francisco', Helvetica, Arial, sans-serif;
+    color: white;
+    background: #6387ab;
+    /* This is the blue color Apple often uses */
+    border: none;
+    border-radius: 14px;
+    /* Apple typically uses quite rounded corners */
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* subtle shadow */
+    transition: all 0.2s ease-in-out;
+}
+
+button.about-me:hover {
+    background: #1b2e42;
+    /* a slightly darker blue on hover */
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    /* slightly more pronounced shadow */
+}
+
+button.about-me:active {
+    background: #003d7a;
+    /* even darker blue when the button is clicked */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    /* the shadow retracts when the button is pressed */
+}

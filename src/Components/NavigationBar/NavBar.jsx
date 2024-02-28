@@ -12,7 +12,7 @@ const NavBar = () => {
     const closeMobileMenu = () => setClick(false);
 
     return (
-        <nav className="navbar">
+        <nav className="navbar main">
         <div className="navbar-container">
             <div className="menu-icon" onClick={handleClick}>
                 {/* You can put an <i> tag here for your menu icon */}

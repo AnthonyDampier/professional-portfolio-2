@@ -95,6 +95,7 @@ button.about-me {
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
+    margin-top: 10px;
 }
 
 button.about-me:hover {

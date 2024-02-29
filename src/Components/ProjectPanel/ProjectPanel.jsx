@@ -38,9 +38,8 @@ const ProjectPanel = () => {
     }
 
     useEffect(() => {
-        if (githubToken){
         fetchEventsContributions();
-        }
+
     }, [username, githubToken]);
 
     if (loading) return <div>Loading...</div>;
@@ -52,21 +51,20 @@ const ProjectPanel = () => {
             <div className='feature-section'>
                 <GitActivity username="AnthonyDampier"/>
                 <div className='grid-container'>
-                {repoSet.size !== 0 ? 
-                    repoSet.map((repoName, index) => (
-                        <div key={index} className="grid-item">
-                            <Microlink url={`https://github.com/${username}/${repoName}/`}
-                                lazy={{ threshold: 0.01 }}
-                                media='auto'
-                                size='medium'
-                            />
+                {repoSet.length !== 0 ? 
+                            repoSet.map((repoName, index) => (
+                                <div key={index} className="grid-item">
+                                    <Microlink url={`https://github.com/${username}/${repoName}/`}
+                                        lazy={{ threshold: 0.01 }}
+                                        media='auto'
+                                        size='medium'
+                                    />
+                                </div>
+                            )) 
+                            : ( loading ? <div>`Loading...`</div> : (<div>`Error: ${error}`</div>))
+                        }           
                         </div>
-                    )) 
-                    : 
-                    <p>No Repositories Found</p>
-                }           
-                </div>
-            </div>
+                    </div>
         </div>
 
     );

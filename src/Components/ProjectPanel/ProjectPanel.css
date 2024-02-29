@@ -5,18 +5,23 @@
 
 .feature-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 4.3vw;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(2, auto);
     grid-gap: 20px;
+    justify-content: center;
 }
 
 .grid-item {
-    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000000;
+}
+
+.grid-item div{
+    height: 100px;
     width: fit-content;
-    background-color: #ffffff;
 }

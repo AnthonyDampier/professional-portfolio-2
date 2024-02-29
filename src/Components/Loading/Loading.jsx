@@ -5,7 +5,7 @@ const Loading = () => {
     return (
         <div className="loading">
             {/* https://codepen.io/rajveer01_pen/pen/qBvWWRe */}
-            <div class="box"></div>
+            <div className="box"></div>
         </div>
     );
 }

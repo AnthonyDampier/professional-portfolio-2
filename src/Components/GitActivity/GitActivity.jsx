@@ -20,7 +20,7 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
       } catch (error) {
         setError(error.message);
       } finally {
-        console.log(dateCommitMap);
+ 
       }
     }
 
@@ -41,7 +41,7 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
   
     return (
       <div className="github-activity">
-        <h2>GitHub Activity</h2>
+        <h1>GitHub Activity</h1>
         <p>* Accounts for only public repositories</p>
         {/* Reference: https://haripo.github.io/react-github-contribution-calendar/ */}
         <Calendar 
@@ -55,7 +55,7 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
             style: {
               'text-decoration': 'none',
               'font-size': '8px',
-              'alignment-baseline': 'central',
+              'alignmentBaseline': 'central',
               'fill': '#fff'
             }
             }}

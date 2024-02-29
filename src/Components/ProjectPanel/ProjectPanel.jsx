@@ -29,7 +29,7 @@ const ProjectPanel = () => {
         } catch (error) {
             setError(error.message);
         } finally {
-            console.log(repoSet);
+
         }
     }
 

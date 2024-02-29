@@ -3,6 +3,7 @@ import Calendar from 'react-github-contribution-calendar';
 import getUserContributions from '../../Utils/GetUserGitHubContributions/GetUserGitContributions.jsx';
 import './GitActivity.css';
 
+
 const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);

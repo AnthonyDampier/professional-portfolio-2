@@ -15,11 +15,11 @@ const Hero = ({linkedIn, GitHubProfile}) => {
                 <p>Managing the end-to-end project lifecycle for multiple Salesforce projects, from scoping and planning to testing and deployment, using agile methodologies, tools, and best practices, ensuring quality, efficiency, and customer satisfaction.</p>
                 <button className="about-me">Check out my resume! CLICK HERE!!</button>
                 <div className="hero-links">   
-                    <a href={GitHubProfile} class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a href={GitHubProfile} className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i className="fab fa-linkedin-in"></i>
                     </a>
-                    <a href={linkedIn} class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
+                    <a href={linkedIn} className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i className="fab fa-github"></i>
                     </a>
                 </div>
             </div>

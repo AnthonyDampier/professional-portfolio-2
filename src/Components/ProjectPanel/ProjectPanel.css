@@ -1,0 +1,24 @@
+.project-panel {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.feature-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 4.3vw;
+    margin-bottom: 10px;
+    margin-bottom: 115px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+}
+
+.grid-item {
+    height: fit-content;
+    width: fit-content;
+    background-color: #ffffff;
+}

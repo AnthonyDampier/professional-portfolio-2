@@ -115,9 +115,9 @@ button.about-me:active {
 
 .hero .hero-phone {
     position: absolute;
-    top: 0vh;
-    left: 71vw;
     bottom: 0;
+    right: 8vw;
+    bottom: 25vh;
     background-color: transparent;
     display: flex;
     justify-content: center;

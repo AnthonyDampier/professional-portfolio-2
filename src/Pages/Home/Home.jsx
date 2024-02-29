@@ -3,7 +3,7 @@ import './Home.css';
 
 // components
 import Hero from "../../Components/Hero/Hero";
-import GitActivity from "../../Components/GitActivity/GitActivity";
+import ProjectPanel from "../../Components/ProjectPanel/ProjectPanel";
 
 // links
 const linkedIn = "https://www.linkedin.com/in/anthonydampier/";
@@ -16,8 +16,9 @@ const home = () => {
                 linkedIn={linkedIn} 
                 GitHubProfile = {GitHubProfile}
             />
-            <GitActivity username="AnthonyDampier"/>
-            {/* GitHub Activity Block */}
+            <ProjectPanel/>
+            
+            
             {/* Project of 6 project complete and to complete 
                 1. Project LINK
                 2. GitHub Activity Block*/}

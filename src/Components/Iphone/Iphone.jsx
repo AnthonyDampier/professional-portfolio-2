@@ -12,8 +12,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Iphone = () => {
     return (
-        <div class="iphone">
-            <div class="iphone-screen">
+        <div className="iphone">
+            <div className="iphone-screen">
                 {/* Screen Here */}
                 <NavBar iphone={true}/>
                 <img src="./Assets/PNG/IphoneProfileImage.png" alt="Iphone Profile"/>
@@ -36,18 +36,18 @@ const Iphone = () => {
                 </div>
                 
             </div>
-            <div class="iphone-top">
+            <div className="iphone-top">
                 <p className="carrier">
                     verizon
                 </p>
                 <div className="black-rim">
-                    <span class="camera"></span>
-                    <span class="speaker"></span>
+                    <span className="camera"></span>
+                    <span className="speaker"></span>
                 </div>
                 <div className="info">
-                    <span class="signal"><FaSignal/></span>
-                    <span class="power"><FaBatteryHalf/></span>
-                    <span class="volume"><FaWifi/></span>
+                    <span className="signal"><FaSignal/></span>
+                    <span className="power"><FaBatteryHalf/></span>
+                    <span className="volume"><FaWifi/></span>
                 </div>
                 
             </div>

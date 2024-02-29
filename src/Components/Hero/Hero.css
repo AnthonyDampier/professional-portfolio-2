@@ -98,6 +98,12 @@ button.about-me {
     margin-top: 10px;
 }
 
+button.about-me .link-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
 button.about-me:hover {
     background: #989898;
     /* a slightly darker blue on hover */

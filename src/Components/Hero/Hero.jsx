@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Hero.css';
 import Iphone from "../Iphone/Iphone";
 
@@ -13,7 +14,7 @@ const Hero = ({linkedIn, GitHubProfile}) => {
                 <p>Developing and deploying a custom Salesforce app for a large education client, using Lightning Web Components, Tailwind CSS, and HTML5, resulting in improved user experience and functionality.</p>
                 <p>Implementing a React JS and Next JS web application for clients, using RESTful APIs, Firebase, and Cloud Functions.</p>
                 <p>Managing the end-to-end project lifecycle for multiple Salesforce projects, from scoping and planning to testing and deployment, using agile methodologies, tools, and best practices, ensuring quality, efficiency, and customer satisfaction.</p>
-                <button className="about-me">Check out my resume! CLICK HERE!!</button>
+                <button className="about-me"><Link to="/AboutMe" className="link-btn">Check out my resume! CLICK HERE!!</Link></button>
                 <div className="hero-links">   
                     <a href={GitHubProfile} className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i className="fab fa-linkedin-in"></i>

@@ -34,7 +34,7 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
   
     return (
       <div className="github-activity">
-        <h2>GitHub Public Repository Activity</h2>
+        <h2>GitHub Repository Activity</h2>
         <p>* Accounts for only accepted commits to public repositories</p>
         {/* Reference: https://haripo.github.io/react-github-contribution-calendar/ */}
         <Calendar 
@@ -45,10 +45,12 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
           panelAttributes={{ 'rx': 0, 'ry': 0 }}
           weekLabelAttributes={{'rotate': 0}}
           monthLabelAttributes={{
+            style: {
               'text-decoration': 'none',
-              'font-size': '24px',
+              'font-size': '8px',
               'alignment-baseline': 'central',
               'fill': '#fff'
+            }
             }}
           />
       </div>

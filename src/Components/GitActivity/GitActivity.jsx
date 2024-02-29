@@ -3,6 +3,7 @@ import Calendar from 'react-github-contribution-calendar';
 import Loading from "../Loading/Loading";
 import getUserContributions from '../../Utils/GetUserGitHubContributions/GetUserGitContributions.jsx';
 import './GitActivity.css';
+import DogWalking from "../DogWalking/DogWalking.jsx";
 
 
 const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
@@ -59,6 +60,9 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
             }
             }}
           />
+          <div className="dogComponent">
+           <DogWalking/>
+          </div>
       </div>
     );
   };

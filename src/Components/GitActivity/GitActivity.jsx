@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from "react";
 import Calendar from 'react-github-contribution-calendar';
+import Loading from "../Loading/Loading";
 import getUserContributions from '../../Utils/GetUserGitHubContributions/GetUserGitContributions.jsx';
 import './GitActivity.css';
 
 
 const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [dateCommitMap, setDateCommitMap] = useState({});
     // const [githubToken, setGithubToken] = useState(env.REACT_APP_GITHUB_TOKEN);
@@ -20,17 +21,21 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
       } finally {
         setLoading(false);
       }
-
     }
+
+    setTimeout(() => {
+        if (loading){
+            setLoading(false);
+        }
+    }, 2000); // 2000 milliseconds = 2 seconds
+
     useEffect(() => {
-      
-      
-      if (githubToken){
+      if (githubToken && !loading){
         fetchEventsContributions();
       }
     }, [username, githubToken]);
   
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div><Loading/></div>;
     if (error) return <div>Error: {error}</div>;
   
     return (

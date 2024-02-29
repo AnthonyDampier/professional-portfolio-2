@@ -1,0 +1,24 @@
+.loading {
+    position: absolute;
+}
+
+.loading .box {
+    position: inherit;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: orange transparent;
+    animation: spin 1.5s infinite ease-out;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

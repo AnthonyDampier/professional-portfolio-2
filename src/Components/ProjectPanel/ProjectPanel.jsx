@@ -1,26 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import Microlink from '@microlink/react';
 import GitActivity from "../../Components/GitActivity/GitActivity";
+import Loading from "../../Components/Loading/Loading";
 import getUserRepositories from '../../Utils/GetUserRepositories/GetUserRepositories.jsx';
 import './ProjectPanel.css';
 
 const ProjectPanel = () => {
     const [username, setUsername] = useState('AnthonyDampier');
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [repoSet, setRepoSet] = useState([]);
 
-    const projects = [
-        { id: 1, title: 'Project 1', description: 'Description of Project 1', url: '' },
-        { id: 2, title: 'Project 2', description: 'Description of Project 2', url: '' },
-        { id: 3, title: 'Project 3', description: 'Description of Project 3', url: '' },
-        { id: 4, title: 'Project 4', description: 'Description of Project 4', url: '' },
-        { id: 5, title: 'Project 5', description: 'Description of Project 5', url: '' },
-        { id: 6, title: 'Project 6', description: 'Description of Project 6', url: '' },
-        { id: 7, title: 'Project 7', description: 'Description of Project 7', url: '' }
-    ];
+    // Set the loading to true after 2 seconds
+    setTimeout(() => {
+        if (loading){
+            setLoading(false);
+        }
+    }, 2000); // 2000 milliseconds = 2 seconds
 
-    const featuredProject = { id: 0, title: 'Featured Project', description: 'Description of Featured Project', url: '' };
 
     // const [githubToken, setGithubToken] = useState(env.REACT_APP_GITHUB_TOKEN);
     let githubToken = process.env.REACT_APP_GITHUB_TOKEN;
@@ -33,7 +30,6 @@ const ProjectPanel = () => {
             setError(error.message);
         } finally {
             console.log(repoSet);
-            setLoading(false);
         }
     }
 
@@ -42,7 +38,7 @@ const ProjectPanel = () => {
 
     }, [username, githubToken]);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div><Loading/></div>;
     if (error) return <div>Error: {error}</div>;
     
     return (
@@ -51,7 +47,7 @@ const ProjectPanel = () => {
             <div className='feature-section'>
                 <GitActivity username="AnthonyDampier"/>
                 <div className='grid-container'>
-                {repoSet.length !== 0 ? 
+                {repoSet.length !== 0 && !loading ? 
                             repoSet.map((repoName, index) => (
                                 <div key={index} className="grid-item">
                                     <Microlink url={`https://github.com/${username}/${repoName}/`}
@@ -61,7 +57,7 @@ const ProjectPanel = () => {
                                     />
                                 </div>
                             )) 
-                            : ( loading ? <div>`Loading...`</div> : (<div>`Error: ${error}`</div>))
+                            : ( loading ? <div className='loading'>`<Loading/>`</div> : (<div>`Error: ${error}`</div>))
                         }           
                         </div>
                     </div>

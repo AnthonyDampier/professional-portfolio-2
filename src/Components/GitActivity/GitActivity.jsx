@@ -3,6 +3,7 @@ import Calendar from 'react-github-contribution-calendar';
 import Loading from "../Loading/Loading";
 import getUserContributions from '../../Utils/GetUserGitHubContributions/GetUserGitContributions.jsx';
 import './GitActivity.css';
+import DogWalking from "../DogWalking/DogWalking.jsx";
 
 
 const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
@@ -19,7 +20,7 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
       } catch (error) {
         setError(error.message);
       } finally {
-        setLoading(false);
+        console.log(dateCommitMap);
       }
     }
 
@@ -30,18 +31,18 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
     }, 2000); // 2000 milliseconds = 2 seconds
 
     useEffect(() => {
-      if (githubToken && !loading){
+      if (githubToken && loading){
         fetchEventsContributions();
       }
-    }, [username, githubToken]);
+    }, [githubToken, username, loading]);
   
     if (loading) return <div><Loading/></div>;
     if (error) return <div>Error: {error}</div>;
   
     return (
       <div className="github-activity">
-        <h2>GitHub Repository Activity</h2>
-        <p>* Accounts for only accepted commits to public repositories</p>
+        <h2>GitHub Activity</h2>
+        <p>* Accounts for only public repositories</p>
         {/* Reference: https://haripo.github.io/react-github-contribution-calendar/ */}
         <Calendar 
           style={{ width: '400px', height: 'auto' }}
@@ -59,6 +60,9 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
             }
             }}
           />
+          <div className="dogComponent">
+           <DogWalking/>
+          </div>
       </div>
     );
   };

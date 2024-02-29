@@ -1,3 +1,5 @@
+// https://codepen.io/davidkpiano/pen/BGxgLa
+
 :root {
   --color-fur: #999999;
   --color-fur-dark: #929292;
@@ -17,8 +19,8 @@
 [class="🐕"] {
   margin-top: 0px;
   z-index: 1;
-  height: 300px;
-  width: 300px;
+  height: 280px;
+  width: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,10 +33,10 @@
   &:before {
     content: '';
     position: absolute;
-    bottom: percentage(40px / 300px);
+    bottom: percentage(40px / 280px);
     left: 0;
     width: 100%;
-    height: percentage(10px / 300px);
+    height: percentage(10px / 280px);
     background-color: #D3D1D1;
     border-radius: 2px;
     animation: shadow
@@ -335,7 +337,7 @@
     left: -20px;
     border-radius: 50%;
     background-color: var(--color-spot);
-    z-index: 1;
+    z-index: 10;
     animation: spot var(--duration) calc(-1 * var(--semi-duration)) both infinite;
     
     @keyframes spot {
@@ -356,6 +358,7 @@
       position: absolute;
       bottom: -10px;
       right: 5px;
+      z-index: 10;
     }
   }
   

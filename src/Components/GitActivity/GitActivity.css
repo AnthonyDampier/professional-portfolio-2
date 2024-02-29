@@ -2,7 +2,6 @@ div.github-activity{
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-left: 2px;
 }
 
 div.github-activity h2 {

@@ -1,6 +1,8 @@
 import React from "react";
 import './DogWalking.scss';
 
+// https://codepen.io/davidkpiano/pen/BGxgLa
+
 const DogWalking = () => {
   return (
     <div class="🐕">

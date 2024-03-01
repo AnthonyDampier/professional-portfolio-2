@@ -17,10 +17,10 @@ const getUserContributions = async (username, token) => {
     const commits = await commitsResponse.json();
 
     for (const commit of commits) {
+      console.log(commit)
       const dt = new Date(commit.commit.author.date);
       const month = (dt.getMonth() + 1).toString().padStart(2, '0');
       const commitDT = `${dt.getFullYear()}-${month}-${dt.getDate()}`;
-
       if (dateCommitMap[commitDT] === undefined) {
         dateCommitMap[commitDT] = 1;
       } else {
@@ -28,7 +28,6 @@ const getUserContributions = async (username, token) => {
       }
     }
   }
-
   return dateCommitMap;
 }
 

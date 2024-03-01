@@ -17,8 +17,6 @@ const home = () => {
                 GitHubProfile = {GitHubProfile}
             />
             <ProjectPanel/>
-            
-            
             {/* Project of 6 project complete and to complete 
                 1. Project LINK
                 2. GitHub Activity Block*/}

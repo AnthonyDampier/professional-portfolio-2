@@ -40,7 +40,7 @@ const GitActivity = ({ username }) => {
         style={{ width: '400px', height: 'auto' }}
         values={dateCommitMap}
         until={new Date()}
-        panelColors={['#fff', '#c6e48b', '#7bc96f', '#239a3b', '#196127']}
+        panelColors={['#fff', '#7DCEA0', '#27AE60', '#1E8449', '#196127']}
         panelAttributes={{ 'rx': 0, 'ry': 0 }}
         weekLabelAttributes={{ 'rotate': 0 }}
         monthLabelAttributes={{

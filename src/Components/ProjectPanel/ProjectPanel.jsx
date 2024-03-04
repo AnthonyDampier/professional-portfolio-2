@@ -12,6 +12,8 @@ const ProjectPanel = () => {
     const [repoSet, setRepoSet] = useState([]);
     const [displayedRepos, setDisplayedRepos] = useState([]);
     const [page, setPage] = useState(0);
+    const [panelNumber, setPanelNumber] = useState(6);
+    const [panelSize, setPanelSize] = useState('large');
 
     useEffect(() => {
         // Simulate loading
@@ -28,7 +30,7 @@ const ProjectPanel = () => {
             try {
                 const repos = await getUserRepositories(username, process.env.REACT_APP_GITHUB_TOKEN);
                 setRepoSet(repos);
-                setDisplayedRepos(repos.slice(0, 4)); // Initially display the first 4 repos
+                setDisplayedRepos(repos.slice(0, panelNumber)); // Initially display the first 4 repos
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -43,14 +45,14 @@ const ProjectPanel = () => {
 
     const handleSeeMore = () => {
         const newPage = page + 1;
-        const startIndex = newPage * 4;
-        const newDisplayedRepos = repoSet.slice(startIndex, startIndex + 4);
+        const startIndex = newPage * panelNumber;
+        const newDisplayedRepos = repoSet.slice(startIndex, startIndex + panelNumber);
         setDisplayedRepos(prev => [...prev, ...newDisplayedRepos]);
         setPage(newPage);
     };
 
     const handleResetView = () => {
-        setDisplayedRepos(repoSet.slice(0, 4));
+        setDisplayedRepos(repoSet.slice(0, panelNumber));
         setPage(0);
     };
 
@@ -59,7 +61,7 @@ const ProjectPanel = () => {
 
     return (
         <div className='project-panel'>
-            <div className='feature-section'>
+            
                 <GitActivity username={username} />
                 <div className='repo-section'>
                     <div className='grid-container'>
@@ -69,22 +71,21 @@ const ProjectPanel = () => {
                                     <Microlink url={`https://github.com/${username}/${repo.name}/`}
                                         lazy={{ threshold: 0.001 }}
                                         media="auto"
-                                        size="large"
+                                        size={panelSize}
                                     />
                                 </div>
                             )) : (loading ? <div className='loading'><Loading /></div> : (<div>Error: {error}</div>))
                         }
                     </div>
                     <div className='repo-buttons'>
-                        {repoSet.length > 4 && displayedRepos.length < repoSet.length && (
+                        {repoSet.length > panelNumber && displayedRepos.length < repoSet.length && (
                         <button onClick={handleSeeMore}>See More</button>
                         )}
-                        {displayedRepos.length > 4 && (
+                        {displayedRepos.length > panelNumber && (
                             <button onClick={handleResetView}>Reset</button>
                         )}
                     </div>
                 </div>
-            </div>
         </div>
     );
 }

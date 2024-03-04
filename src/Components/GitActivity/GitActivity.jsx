@@ -39,33 +39,42 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
       }
     }, [githubToken, username, loading]);
   
-    if (loading) return <div><Loading/></div>;
-    if (error) return <div>Error: {error}</div>;
+    // if (loading) return <div><Loading/></div>;
+    // if (error) return <div>Error: {error}</div>;
   
     return (
       <div className="github-activity">
-        <h1>GitHub Activity</h1>
-        <p>* Accounts for only public repositories</p>
-        {/* Reference: https://haripo.github.io/react-github-contribution-calendar/ */}
-        <Calendar 
-          style={{ width: '400px', height: 'auto' }}
-          values={dateCommitMap} 
-          until={Date.Today}
-          panelColors={['#fff', '#c6e48b', '#7bc96f', '#239a3b', '#196127']}
-          panelAttributes={{ 'rx': 0, 'ry': 0 }}
-          weekLabelAttributes={{'rotate': 0}}
-          monthLabelAttributes={{
-            style: {
-              'text-decoration': 'none',
-              'font-size': '8px',
-              'alignmentBaseline': 'central',
-              'fill': '#fff'
-            }
-            }}
-          />
-          <div className="dogComponent">
-           <DogWalking/>
-          </div>
+        <div className="github-activity-calendar">
+          <h1>GitHub Activity</h1>
+          <p>* Public Repositories Only</p>
+          {/* Reference: https://haripo.github.io/react-github-contribution-calendar/ */}
+          { loading && <div><Loading/></div>}
+          { error && <div><p className="error">Error: {error}</p></div>}
+          { (!loading && !error && dateCommitMap.size !== 0) &&
+            <Calendar 
+              style={{ width: '400px', height: 'auto' }}
+              values={dateCommitMap} 
+              until={Date.Today}
+              panelColors={['#fff', '#c6e48b', '#7bc96f', '#239a3b', '#196127']}
+              panelAttributes={{ 'rx': 1, 'ry': 1 }}
+              weekLabelAttributes={{'rotate': 0}}
+              monthLabelAttributes={{
+                style: {
+                  'text-decoration': 'none',
+                  'font-size': '8px',
+                  'alignmentBaseline': 'central',
+                  'fill': '#fff'
+                }
+              }}
+              />
+          }
+          { (loading && !error && dateCommitMap.size === 0) &&
+            <div><h1>Request Return W/out Data</h1></div>
+          }
+        </div>
+        <div className="dog-component">
+          <DogWalking/>
+        </div>
       </div>
     );
   };

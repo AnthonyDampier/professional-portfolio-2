@@ -3,51 +3,33 @@
     margin-bottom: 40px;
 }
 
-.feature-section{
-    display: flex;
-    justify-content: space-between;
-    gap: 2vw;
-}
-
 .repo-section {
-    padding: 5px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     background-color: rgb(122, 121, 121);
     border-radius: 5px;
+    width: fit-content;
 }
 
 .repo-section .grid-container {
-    box-shadow: 0px 0px 10px 0px rgb(122, 121, 121);
-    padding: 5px;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    overflow-y: auto;
-    max-height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    gap: 20px 0px;
 }
 
+.repo-section .grid-container .grid-item {
+    flex: 0 1 auto;
+}
 .repo-section .repo-buttons {
-    justify-content: column;
-    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .repo-section .repo-buttons button {
-    justify-content: center;
     box-shadow: 0px 0px 10px 0px #000000;
-    width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-
-.grid-item {
-    padding: 5px;
-}
-/*
-.grid-item div {
-    flex: 0 1 auto;
-    height: 100px;
-    width: 100%;
-}
-
-.grid-item:hover div {
-    background-color: #ffffff;
-    border: none;
-} */

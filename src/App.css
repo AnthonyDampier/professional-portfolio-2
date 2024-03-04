@@ -3,3 +3,8 @@
     margin-left: 7vw;
     margin-right: 7vw;
 }
+
+p.error {
+    color: red;
+    font-size: 1.25rem;
+}

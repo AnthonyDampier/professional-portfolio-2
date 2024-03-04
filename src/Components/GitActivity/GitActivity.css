@@ -4,6 +4,7 @@ div.github-activity {
     align-items: center;
     padding: 0;
     height: fit-content;
+    min-height: fit-content;
 }
 
 div.github-activity-calendar {

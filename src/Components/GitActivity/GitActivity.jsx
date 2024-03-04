@@ -39,8 +39,8 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
       }
     }, [githubToken, username, loading]);
   
-    if (loading) return <div><Loading/></div>;
-    if (error) return <div>Error: {error}</div>;
+    // if (loading) return <div><Loading/></div>;
+    // if (error) return <div>Error: {error}</div>;
   
     return (
       <div className="github-activity">
@@ -48,9 +48,9 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
           <h1>GitHub Activity</h1>
           <p>* Public Repositories Only</p>
           {/* Reference: https://haripo.github.io/react-github-contribution-calendar/ */}
-          { loading && <Loading/>}
-          { error && <div>Error: {error}</div>}
-          { (!loading && !error) &&
+          { loading && <div><Loading/></div>}
+          { error && <div><p className="error">Error: {error}</p></div>}
+          { (!loading && !error && dateCommitMap.size !== 0) &&
             <Calendar 
               style={{ width: '400px', height: 'auto' }}
               values={dateCommitMap} 
@@ -67,6 +67,9 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
                 }
               }}
               />
+          }
+          { (loading && !error && dateCommitMap.size === 0) &&
+            <div><h1>Request Return W/out Data</h1></div>
           }
         </div>
         <div className="dog-component">

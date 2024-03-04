@@ -5,14 +5,14 @@ const getUserContributions = async (username, token) =>{
     Authorization: `token ${token}`,
   };
 
-  const eventsResponse = await fetch(`https://api.github.com/users/${username}/events`, { headers });
-  const events = await eventsResponse.json();
-  const repoSet = Array.from(new Set(events.map(event => event.repo.name)));
-  for (let i = 0; i < repoSet.length; i++){
-    const [owner, repoName] = repoSet[i].split('/');
-    repoSet[i] = repoName;
-  }
-  return repoSet;
+  const reposResponse = await fetch(`https://api.github.com/users/${username}/repos`, { headers });
+  const repos = await reposResponse.json();
+  // sort by updated_at
+  repos.sort((a, b) => {
+    return new Date(b.updated_at) - new Date(a.updated_at);
+  });
+  console.log(repos)
+  return repos
 }
 
 export default getUserContributions;

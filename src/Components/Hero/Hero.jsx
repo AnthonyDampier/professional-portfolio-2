@@ -9,11 +9,16 @@ const Hero = ({linkedIn, GitHubProfile}) => {
             <div className="hero-info">
                 <h3 className="salutations">WELCOME! My name is</h3>
                 <h1 className="name">Anthony Dampier</h1>
-                <h2 className="title">I'm a Developer and Project Manager</h2>
-                <p>with multi-dimensional skill-set to the forefront of Salesforce consulting and development. With a strong background in Salesforce Software Development, React JS Application Development, Solution Management, and DevOps, I have delivered innovative and effective solutions for various clients at Digital Mass, a leading Salesforce consulting firm. Some of my notable achievements include:</p>
-                <p>Developing and deploying a custom Salesforce app for a large education client, using Lightning Web Components, Tailwind CSS, and HTML5, resulting in improved user experience and functionality.</p>
-                <p>Implementing a React JS and Next JS web application for clients, using RESTful APIs, Firebase, and Cloud Functions.</p>
-                <p>Managing the end-to-end project lifecycle for multiple Salesforce projects, from scoping and planning to testing and deployment, using agile methodologies, tools, and best practices, ensuring quality, efficiency, and customer satisfaction.</p>
+                <h2 className="title">I'm a Developer</h2>
+                <p>
+                    An accomplished professional with a blend of skills in Web Development and Project Management, I, Anthony Dampier, offer a unique combination of technical expertise and strategic vision. 
+                </p>
+                <p>
+                My journey has brought me to many placing and to learn many thing. From leading Salesforce application development at Digital Mass, from orchestration of full-stack projects at Prime Digital Academy showcases my ability to deliver innovative solutions, from the U.S. Marine Corps; leading Marines as Sergeant, has fine-tuned my leadership, strategic problem-solving, and adaptability.
+                </p>
+                <p>
+                With a robust command over modern web technologies and Salesforce, coupled with a proven track record in project management, I am ready to drive growth and technological innovation in your organization.
+                </p>
                 <button className="about-me"><Link to="/AboutMe" className="link-btn">Check out my resume! CLICK HERE!!</Link></button>
                 <div className="hero-links">   
                     <a href={GitHubProfile} className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

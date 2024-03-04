@@ -15,7 +15,7 @@
     color: #dcdcdc;
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 .hero .hero-info .hero-links {
@@ -25,7 +25,7 @@
     margin-top: 1rem;
     background-color: transparent;
     margin-left: 5px;
-    height: 100px;
+    height: fit-content;
 }
 
 .hero .hero-info .hero-links a i {

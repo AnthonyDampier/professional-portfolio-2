@@ -34,7 +34,9 @@ const ProjectPanel = () => {
     }
 
     useEffect(() => {
-        fetchEventsContributions();
+        if (githubToken && loading && repoSet.length === 0){
+            fetchEventsContributions();
+        }
 
     }, [username, githubToken]);
 
@@ -48,12 +50,12 @@ const ProjectPanel = () => {
                 <GitActivity username="AnthonyDampier"/>
                 <div className='grid-container'>
                 {repoSet.length !== 0 && !loading ? 
-                            repoSet.map((repoName, index) => (
+                            repoSet.map((repo, index) => (
                                 <div key={index} className="grid-item">
-                                    <Microlink url={`https://github.com/${username}/${repoName}/`}
-                                        lazy={{ threshold: 0.01 }}
-                                        media='auto'
-                                        size='medium'
+                                    <Microlink url={`https://github.com/${username}/${repo.name}/`}
+                                        lazy={{ threshold: 0.001 }}
+                                        media="auto"
+                                        size="large"
                                     />
                                 </div>
                             )) 

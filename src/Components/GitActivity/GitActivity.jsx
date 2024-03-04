@@ -15,12 +15,15 @@ const GitActivity = ({username}) => {const [events, setEvents] = useState([]);
      // Load environment variables from .env file
     const fetchEventsContributions = async () => { 
       setLoading(true);
+      let dateCommitMapResponse = {};
       try {
-        setDateCommitMap(await getUserContributions(username, process.env.REACT_APP_GITHUB_TOKEN));
+        dateCommitMapResponse = await getUserContributions(username, process.env.REACT_APP_GITHUB_TOKEN);
       } catch (error) {
         setError(error.message);
       } finally {
- 
+        console.log(dateCommitMapResponse);
+        setDateCommitMap(dateCommitMapResponse);
+        
       }
     }
 

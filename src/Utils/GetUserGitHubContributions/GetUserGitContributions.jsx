@@ -5,26 +5,23 @@ const getUserContributions = async (username, token) =>{
     Authorization: `token ${token}`,
   };
 
-  const eventsResponse = await fetch(`https://api.github.com/users/${username}/events`, { headers });
-  const events = await eventsResponse.json();
-  const repoSet = events.map(event => event.repo.name);
+  const repoResponse = await fetch(`https://api.github.com/users/${username}/repos`, { headers });
+  const repos = await repoResponse.json();
+  const repoNameArray = repos.map(repo => repo.name);
 
   let dateCommitMap = {};
-  for (const repo of repoSet) {
-    const [owner, repoName] = repo.split('/');
-    const commitsResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/commits`, { headers });
+  for (const repoName of repoNameArray) {
+    const commitsResponse = await fetch(`https://api.github.com/repos/${username}/${repoName}/commits`, { headers });
     const commits = await commitsResponse.json();
-
     for (let i = 0; i < commits.length; i++){
       const dt = new Date(commits[i].commit.author.date);
+      const day = dt.getDate().toString().length === 1 ? "0" + dt.getDate() : dt.getDate();
       const month = (dt.getMonth() + 1).toString().length === 1 ? "0" + (dt.getMonth() + 1) : (dt.getMonth() + 1);
-      const commitDT = dt.getFullYear() + "-" + (month) + "-" + dt.getDate();
-      console.log(commitDT);
-      console.log(repoName);
-      dateCommitMap[commitDT] = commits.length + dateCommitMap[commitDT] || commits.length;
+      const commitDT = dt.getFullYear() + "-" + (month) + "-" + day;
+      // dateCommitMap[commitDT] = commits.length + dateCommitMap[commitDT] || commits.length;
+      dateCommitMap[commitDT] = dateCommitMap[commitDT] !== undefined ? commits.length + dateCommitMap[commitDT] : commits.length;
     }
   }
-
   return dateCommitMap;
 }
 

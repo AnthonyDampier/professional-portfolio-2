@@ -12,7 +12,7 @@ const ProjectPanel = () => {
     const [repoSet, setRepoSet] = useState([]);
     const [displayedRepos, setDisplayedRepos] = useState([]);
     const [page, setPage] = useState(1);
-    const [panelNumber, setPanelNumber] = useState(12);
+    const [panelNumber, setPanelNumber] = useState(6);
     const [panelSize, setPanelSize] = useState('large');
 
     useEffect(() => {
@@ -69,7 +69,7 @@ const ProjectPanel = () => {
                             displayedRepos.map((repo, index) => (
                                 <div key={index} className="grid-item">
                                     <Microlink url={`https://github.com/${username}/${repo.name}/`}
-                                        lazy={{ threshold: 0.001 }}
+                                        lazy={{ threshold: 0.01 }}
                                         media="auto"
                                         size={panelSize}
                                     />

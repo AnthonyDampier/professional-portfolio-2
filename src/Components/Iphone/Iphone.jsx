@@ -16,7 +16,9 @@ const Iphone = () => {
             <div className="iphone-screen">
                 {/* Screen Here */}
                 <NavBar iphone={true}/>
-                <img src="./Assets/PNG/IphoneProfileImage.png" alt="Iphone Profile"/>
+                <div className="img-container">
+                    {/* <img src="" alt="Iphone Profile"/> */}
+                </div>
                 <p className="name">Anthony Dampier</p>
                 <div className="link-tree">
                     <a>GitHub Profile</a>

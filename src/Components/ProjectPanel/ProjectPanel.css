@@ -1,35 +1,80 @@
+:root {
+    --background-color: rgb(122, 121, 121);
+    --button-shadow: 0px 0px 10px 0px #000000;
+    --border-radius: 5px;
+    --primary-spacing: 20px;
+    --secondary-spacing: 10px;
+}
+
 .project-panel {
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
 .repo-section {
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    background-color: rgb(122, 121, 121);
-    border-radius: 5px;
-    width: fit-content;
+    margin-top: var(--primary-spacing);
+    padding-top: var(--primary-spacing);
+    padding-bottom: var(--secondary-spacing);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    padding-left: 10px;
+    padding-right: 0px;
 }
 
 .repo-section .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-bottom: 10px;
-    gap: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--secondary-spacing);
+    padding-bottom: var(--secondary-spacing);
+    overflow-y: auto;
+    max-height: 450px;
+    width: fit-content;
+    padding: 5px;
 }
 
-.repo-section .grid-container .grid-item {
-    flex: 0 1 auto;
+@media (max-width: 768px) {
+    .repo-section .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+@media (max-width: 768px) {
+    .repo-section .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+.repo-section .grid-container .grid-item {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--button-shadow);
+    overflow: auto;
+    padding: 10px;
+}
+
+.repo-section .grid-container .grid-item div {
+    
+}
+
 .repo-section .repo-buttons {
     display: flex;
     justify-content: center;
+    gap: 10px; /* Adds space between buttons if there are multiple */
 }
 
 .repo-section .repo-buttons button {
-    box-shadow: 0px 0px 10px 0px #000000;
+    box-shadow: var(--button-shadow);
     margin-top: 5px;
     margin-bottom: 5px;
+    cursor: pointer; /* Indicates clickable items */
+    transition: transform 0.2s ease; /* Smooth transition for interaction */
+}
+
+.repo-section .repo-buttons button:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
 }

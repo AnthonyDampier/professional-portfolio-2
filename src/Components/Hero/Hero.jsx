@@ -30,7 +30,7 @@ const Hero = ({linkedIn, GitHubProfile}) => {
                 </div>
             </div>
             <div className="hero-image">
-                <img src="../Assets/ProfilePhoto.jpeg" alt="Hero"/>
+                <img src="../Assets/19 Medium.jpeg" alt="Hero"/>
             </div>
             <div className="hero-phone">
                 <Iphone />

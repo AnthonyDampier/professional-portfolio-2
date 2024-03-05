@@ -11,8 +11,8 @@ const ProjectPanel = () => {
     const [error, setError] = useState(null);
     const [repoSet, setRepoSet] = useState([]);
     const [displayedRepos, setDisplayedRepos] = useState([]);
-    const [page, setPage] = useState(0);
-    const [panelNumber, setPanelNumber] = useState(6);
+    const [page, setPage] = useState(1);
+    const [panelNumber, setPanelNumber] = useState(12);
     const [panelSize, setPanelSize] = useState('large');
 
     useEffect(() => {

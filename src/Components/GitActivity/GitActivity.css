@@ -46,4 +46,20 @@ div.github-activity-calendar p {
     padding: 0;
     justify-content: center;
     width: 30%;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+@media (max-width: 1000px) {
+    div.github-activity {
+        display: flex;
+        align-items: center;
+    }
+
+    div.github-activity-calendar {
+        width: 100%;
+    }
+
+    .github-activity .dog-component {
+        display: none;
+    }
 }

@@ -98,7 +98,7 @@ const Projects = () => {
 
     return (
         <div className="project-panel">
-                <h2 className="repo-header">Feature Projects</h2>
+                <h2 className="repo-header">Featured Projects</h2>
                 <div className="repo-section">
                     <div className="grid-container">
                         {FEATURE_PROJECTS.length !== 0 && !loading ?

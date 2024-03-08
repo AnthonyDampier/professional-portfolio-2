@@ -17,48 +17,41 @@
     padding-bottom: var(--secondary-spacing);
     background-color: var(--background-color);
     border-radius: var(--border-radius);
+    width: fit-content;
     padding-left: 10px;
-    padding-right: 0px;
+    padding-right: 10px;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .repo-section .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     gap: var(--secondary-spacing);
     padding-bottom: var(--secondary-spacing);
-    overflow-y: auto;
-    max-height: 450px;
-    width: fit-content;
-    padding: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     .repo-section .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, auto);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .repo-section .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, auto);
     }
-    
 }
 
 
 .repo-section .grid-container .grid-item {
     width: fit-content;
     height: fit-content;
-    padding: 10px;
+    padding: 3px;
     background-color: #fff;
     border-radius: var(--border-radius);
     box-shadow: var(--button-shadow);
-    overflow: auto;
-    padding: 10px;
-}
-
-.repo-section .grid-container .grid-item div {
-    
 }
 
 .repo-section .repo-buttons {

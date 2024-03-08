@@ -69,7 +69,7 @@ const ProjectPanel = () => {
                             displayedRepos.map((repo, index) => (
                                 <div key={index} className="grid-item">
                                     <Microlink url={`https://github.com/${username}/${repo.name}/`}
-                                        lazy={{ threshold: 1 }}
+                                        
                                         media="auto"
                                         size={panelSize}
                                     />

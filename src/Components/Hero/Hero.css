@@ -106,17 +106,13 @@ button.about-me .link-btn {
 
 button.about-me:hover {
     background: #989898;
-    /* a slightly darker blue on hover */
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
-    font-size: 18px;
-    /* slightly more pronounced shadow */
 }
 
 button.about-me:active {
     background: #003d7a;
-    /* even darker blue when the button is clicked */
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-    /* the shadow retracts when the button is pressed */
+
 }
 
 .hero .hero-phone {

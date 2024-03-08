@@ -46,7 +46,7 @@
 .hero .hero-image{
     position: absolute;
     background-color: transparent;
-    left: 47vw;
+    left: 50vw;
     z-index: -10;
     backdrop-filter: blur(1px);
     background-color: #565656;
@@ -121,11 +121,75 @@ button.about-me:active {
 
 .hero .hero-phone {
     position: absolute;
-    top: 20vh;
-    right: 8vw;
+    top: 26vh;
+    right: 10vw;
     bottom: 25vh;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center
+}
+
+@media (max-width: 1400px) {
+    .hero .hero-phone {
+        display: none;
+    }
+    .hero .hero-image{
+        position: absolute;
+        background-color: transparent;
+        top: 7vh;
+        left: 60vw;
+        z-index: -10;
+        backdrop-filter: blur(1px);
+        background-color: #565656;
+    }
+    
+    .hero .hero-image img {
+        width: 26vw;
+        display: flex;
+        justify-content: center;
+        object-fit: contain;
+        image-rendering: crisp-edges;
+        image-rendering: crisp-edges;
+        image-resolution: from-image;
+        filter: grayscale(94%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .hero .hero-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        width: 53vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero .hero-phone {
+        display: none;
+    }
+    .hero .hero-image{
+        display:none;
+    }
+    
+    .hero .hero-image img {
+        width: 26vw;
+        display: flex;
+        justify-content: center;
+        object-fit: contain;
+        image-rendering: crisp-edges;
+        image-rendering: crisp-edges;
+        image-resolution: from-image;
+        filter: grayscale(94%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .hero .hero-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        width: 100vw;
+    }
 }

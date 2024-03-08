@@ -45,16 +45,10 @@ function App() {
                 <Network />
               }>
             </Route>
-            {/* About */}
-            <Route path="/AboutMe" exact 
+            {/* Resume */}
+            <Route path="/Resume" exact 
               element={
                 <AboutMe />
-              }>
-            </Route>
-            {/* ContactMe */}
-            <Route path="/ContactMe" exact 
-              element={
-                <ContactMe />
               }>
             </Route>
           </Routes>

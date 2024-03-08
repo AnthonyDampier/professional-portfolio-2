@@ -1,0 +1,23 @@
+.professional-resources a {
+    color: #bfbfbf;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.professional-resources a:hover {
+    color: #515151;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.professional-resources h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.professional-resources h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+}

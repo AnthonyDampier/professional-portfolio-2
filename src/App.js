@@ -7,7 +7,7 @@ import Home from './Pages/Home/Home';
 import Projects from './Pages/Projects/Projects';
 import ProfessionalResources from './Pages/ProfessionalResources/ProfessionalResources';
 import Network from './Pages/Network/Network';
-import AboutMe from './Pages/AboutMe/AboutMe';  
+import Resume from './Pages/Resume/Resume';  
 import ContactMe from './Pages/ContactMe/ContactMe';
 
 // Components
@@ -48,7 +48,7 @@ function App() {
             {/* Resume */}
             <Route path="/Resume" exact 
               element={
-                <AboutMe />
+                <Resume />
               }>
             </Route>
           </Routes>

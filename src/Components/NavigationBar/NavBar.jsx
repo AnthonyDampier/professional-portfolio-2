@@ -17,7 +17,6 @@ const NavBar = () => {
             <div className="menu-icon" onClick={handleClick}>
                 {/* You can put an <i> tag here for your menu icon */}
                 <i className={click ? "fas fa-times" : "fas fa-bars"} />
-                <RxHamburgerMenu />
             </div>
             <div className="logo">
             {/* You can put an <img> tag here for your logo or use text */}

@@ -1,8 +1,6 @@
 .navbar {
-    background: transparent;
-    /* Match the navbar background color */
+    width: 100%;
     height: 80px;
-    /* Adjust to match the height in your image */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +14,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* Adjust based on your design */
     padding: 0 40px;
 }
 
@@ -64,26 +61,29 @@
 /* ... other styles ... */
 
 @media screen and (max-width: 960px) {
-    .main .menu-icon {
+    .navbar-container {
+        width: 100%;
+        background-color: #141e29;
+    }
+    .navbar-container .menu-icon {
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
+        right: 1;
         font-size: 1.8rem;
         cursor: pointer;
         text-align: right;
+        color: #fff
     }
 
-    .main .nav-menu {
+    .navbar-container .nav-menu {
         display: flex;
         flex-direction: column;
         height: 100vh;
         position: absolute;
-        top: 64px;
+        top: 2.75vh;
         left: -100%;
         opacity: 1;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease;;
     }
 
     .main .nav-menu.active {

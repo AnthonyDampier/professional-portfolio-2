@@ -11,13 +11,11 @@ const Hero = ({linkedIn, GitHubProfile}) => {
                 <h1 className="name">Anthony Dampier</h1>
                 <h2 className="title">I'm a Developer</h2>
                 <p>
-                    An accomplished professional with a blend of skills in Web Development and Project Management, I, Anthony Dampier, offer a unique combination of technical expertise and strategic vision. 
-                </p>
+                    An accomplished professional with a blend of Web Development and Project Management skills, I, Anthony Dampier, offer a unique combination of technical expertise and strategic vision.                 </p>
                 <p>
-                My journey has brought me to many placing and to learn many thing. From leading Salesforce application development at Digital Mass, from orchestration of full-stack projects at Prime Digital Academy showcases my ability to deliver innovative solutions, from the U.S. Marine Corps; leading Marines as Sergeant, has fine-tuned my leadership, strategic problem-solving, and adaptability.
-                </p>
+                My journey has brought me to many places and taught me many things. From leading Salesforce application development at Digital Mass to orchestration of full-stack projects at Prime Digital Academy showcases my ability to deliver innovative solutions from the U.S. Marine Corps; leading Marines as Sergeant has fine-tuned my leadership, strategic problem-solving and adaptability.                </p>
                 <p>
-                With a robust command over modern web technologies and Salesforce, coupled with a proven track record in project management, I am ready to drive growth and technological innovation in your organization.
+                    With a robust command over modern web technologies and Salesforce, coupled with a proven track record in project management, I am ready to drive growth and technological innovation in your organization.
                 </p>
                 <button className="about-me"><Link to="/Resume" className="link-btn">Check out my resume! CLICK HERE!!</Link></button>
                 <div className="hero-links">   

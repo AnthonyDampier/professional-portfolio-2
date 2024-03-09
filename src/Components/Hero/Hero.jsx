@@ -19,7 +19,7 @@ const Hero = ({linkedIn, GitHubProfile}) => {
                 <p>
                 With a robust command over modern web technologies and Salesforce, coupled with a proven track record in project management, I am ready to drive growth and technological innovation in your organization.
                 </p>
-                <button className="about-me"><Link to="/AboutMe" className="link-btn">Check out my resume! CLICK HERE!!</Link></button>
+                <button className="about-me"><Link to="/Resume" className="link-btn">Check out my resume! CLICK HERE!!</Link></button>
                 <div className="hero-links">   
                     <a href={GitHubProfile} className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i className="fab fa-linkedin-in"></i>

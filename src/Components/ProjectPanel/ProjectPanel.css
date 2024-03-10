@@ -15,15 +15,21 @@
 }
 
 .featured {
-    width: 500px;
+    max-width: 500px;
+    min-height: 425px;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 
 .live-website-image {
-    width: 500px;
+    width: 490px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     object-fit: fill;
     border-radius: var(--border-radius);
-    border-style: groove;
+    border-style: solid;
     border-width: .1em;
     border-color: #bebebe;
 }
@@ -33,6 +39,7 @@ h2.repo-header  {
     padding: 0;
     font-size: 2.6em;
     margin-bottom: 5px;
+    text-wrap: wrap;
 }
 
 h3.repo-name{
@@ -44,10 +51,13 @@ h3.repo-name{
 }
 
 p.repo-description {
+    display: flex;
+    text-wrap: wrap;
     margin: 0;
     padding: 0;
     font-size: .7em;
     color: var(--primary-color);
+    overflow-wrap: break-word;
 }
 
 .grid-item.featured {
@@ -79,6 +89,8 @@ img.github-img:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: absolute;
+    bottom: 0;
 }
 
 .repo-section {

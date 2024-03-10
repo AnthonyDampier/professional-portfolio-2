@@ -8,6 +8,13 @@ import "./ProjectPanel.css";
 const GITHUB_PNG = "../../Assets/PNG/github-mark.png";
 
 const FEATURE_PROJECTS = [
+    {
+        name: "Car Showcase",
+        description: "Responsive mock site for finding, booking, and renting vehicle built with Next, React, and Typescript",
+        image: "../Assets/PNG/Projects/Screenshot 2024-03-09 at 4.06.09 PM.png",
+        urlSite: "https://car-showcase-psi-teal.vercel.app/",
+        urlRepo: "https://github.com/AnthonyDampier/car_showcase"
+    },
     { 
         name: "Hangman",
         description: "A simple hangman game built with React and TypeScript.",

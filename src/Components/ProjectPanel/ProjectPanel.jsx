@@ -9,6 +9,13 @@ const GITHUB_PNG = "../../Assets/PNG/github-mark.png";
 
 const FEATURE_PROJECTS = [
     {
+        name: "Evently",
+        description: "A full stack event management application built with Next, React, TypeScript, TailwindCSS, Shadcn/ui, Clerk, and MongoDB",
+        image:  "../Assets/PNG/Evently_App.png",
+        urlSite: "https://event-management-service.vercel.app/",
+        urlRepo: "https://github.com/AnthonyDampier/event-management-service"
+    },
+    {
         name: "Car Showcase",
         description: "Responsive mock site for finding, booking, and renting vehicle built with Next, React, and Typescript",
         image: "../Assets/PNG/Projects/Screenshot 2024-03-09 at 4.06.09 PM.png",

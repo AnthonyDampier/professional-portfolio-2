@@ -9,6 +9,13 @@ const GITHUB_PNG = "../../Assets/PNG/github-mark.png";
 
 const FEATURE_PROJECTS = [
     {
+        name: "Apple Front-End Clone",
+        description: "A clone of the Apple front-end built with React, Three.js, GSAP, and TailwindCSS",
+        image: "../Assets/PNG/Projects/apple-clone.png",
+        urlSite: "https://apple-webpage-eta.vercel.app/",
+        urlRepo: "https://github.com/AnthonyDampier/apple_webpage"
+    },
+    {
         name: "Evently",
         description: "A full stack event management application built with Next, React, TypeScript, TailwindCSS, Shadcn/ui, Clerk, and MongoDB",
         image:  "../Assets/PNG/Evently_App.png",

@@ -9,6 +9,13 @@ const GITHUB_PNG = "../../Assets/PNG/github-mark.png";
 
 const FEATURE_PROJECTS = [
     {
+        name: "2D Game Engine",
+        description: "A 2D game engine built with Canvas and JavaScript",
+        image: "../Assets/PNG/Projects/2D-game-engine.png",
+        urlSite: "https://canvas-rpg-engine-and-starter-kit.vercel.app/",
+        urlRepo: "https://github.com/AnthonyDampier/Canvas-RPG-Kit"
+    },
+    {
         name: "Apple Front-End Clone",
         description: "A clone of the Apple front-end built with React, Three.js, GSAP, and TailwindCSS",
         image: "../Assets/PNG/Projects/apple-clone.png",
